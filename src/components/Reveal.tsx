@@ -7,13 +7,12 @@ type RevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
-  y?: number;
 };
 
-export function Reveal({ children, className, delay = 0, y = 22 }: RevealProps) {
+export function Reveal({ children, className, delay = 0 }: RevealProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
@@ -33,7 +32,7 @@ export function StaggerContainer({
 }) {
   return (
     <motion.div
-      initial="hidden"
+      initial={false}
       whileInView="show"
       viewport={{ once: true, margin: "-80px" }}
       variants={{
@@ -61,7 +60,7 @@ export function StaggerItem({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 24 },
+        hidden: { opacity: 1, y: 0 },
         show: {
           opacity: 1,
           y: 0,
