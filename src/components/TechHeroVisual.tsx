@@ -1,66 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  BarChart3,
-  Braces,
-  ChartNoAxesColumnIncreasing,
-  ReceiptText,
-  Smartphone,
-} from "lucide-react";
-
-const floating = [
-  { icon: Braces, label: "Code", className: "left-4 top-1", delay: 0 },
-  { icon: ReceiptText, label: "POS", className: "right-5 top-12", delay: 0.4 },
-  {
-    icon: BarChart3,
-    label: "Reports",
-    className: "bottom-28 left-2",
-    delay: 0.8,
-  },
-  {
-    icon: ChartNoAxesColumnIncreasing,
-    label: "Growth",
-    className: "bottom-16 right-28",
-    delay: 1.1,
-  },
-];
+import { BarChart3, ReceiptText, Smartphone } from "lucide-react";
 
 export function TechHeroVisual() {
   return (
     <div className="relative mx-auto w-full max-w-xl py-2">
       <div className="circuit-lines rounded-lg" />
 
-      {floating.map((item) => {
-        const Icon = item.icon;
-        return (
-          <motion.div
-            key={item.label}
-            animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              delay: item.delay,
-              ease: "easeInOut",
-            }}
-            className={`absolute z-20 hidden rounded-lg border border-white/20 bg-white/15 p-3 text-white shadow-xl backdrop-blur-md sm:block ${item.className}`}
-            aria-label={item.label}
-          >
-            <Icon className="h-5 w-5" />
-          </motion.div>
-        );
-      })}
-
       <div className="hover-sheen relative z-10 rounded-lg border border-white/25 bg-[#071B3A]/88 p-3 shadow-2xl shadow-black/30 backdrop-blur">
         <div className="rounded-md bg-[#F5F7FB] p-3">
-          <div className="mb-3 flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#FF6A00]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#00AEEF]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#007BFF]" />
+          <div className="mb-3 flex items-center justify-between">
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FF6A00]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#00AEEF]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#007BFF]" />
+            </div>
+            <span className="rounded-full bg-[#071B3A]/8 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#071B3A]/55">
+              Dashboard
+            </span>
           </div>
-          <div className="grid gap-3 sm:grid-cols-[1fr_0.82fr]">
+
+          <div className="grid gap-3 sm:grid-cols-[1.05fr_0.95fr]">
             <div className="rounded-md bg-white p-4 shadow-sm">
-              <div className="h-3 w-24 rounded-full bg-[#071B3A]/15" />
+              <div className="flex items-center justify-between">
+                <span className="h-3 w-24 rounded-full bg-[#071B3A]/15" />
+                <BarChart3 className="h-5 w-5 text-[#007BFF]" />
+              </div>
               <div className="mt-4 grid grid-cols-4 items-end gap-2">
                 {[46, 68, 56, 78].map((height) => (
                   <span
@@ -76,6 +42,7 @@ export function TechHeroVisual() {
                 <span className="h-9 rounded-md bg-[#00AEEF]/10" />
               </div>
             </div>
+
             <div className="grid gap-3">
               <div className="rounded-md bg-[#071B3A] p-4 text-white">
                 <div className="flex items-center justify-between">
@@ -84,11 +51,11 @@ export function TechHeroVisual() {
                     POS
                   </span>
                 </div>
-                <div className="mt-5 h-2 w-full rounded-full bg-white/15" />
-                <div className="mt-2 h-2 w-2/3 rounded-full bg-white/15" />
+                <div className="mt-5 h-2 w-full rounded-full bg-white/18" />
+                <div className="mt-2 h-2 w-2/3 rounded-full bg-white/18" />
               </div>
               <div className="rounded-md bg-white p-4 shadow-sm">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   <span className="h-8 w-8 rounded-lg bg-[#FF6A00]/15" />
                   <span className="h-3 flex-1 rounded-full bg-[#071B3A]/15" />
                 </div>
@@ -98,7 +65,7 @@ export function TechHeroVisual() {
         </div>
       </div>
 
-      <div className="relative z-20 mt-4 grid grid-cols-[1fr_auto] items-end gap-4">
+      <div className="relative z-20 mt-4 grid gap-4 sm:grid-cols-[1fr_8rem]">
         <div className="rounded-lg border border-white/20 bg-white/14 p-4 text-white shadow-xl backdrop-blur-md">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-[#00AEEF]">
             Live Orders
@@ -123,7 +90,7 @@ export function TechHeroVisual() {
         <motion.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-          className="w-28 rounded-[1.75rem] border-4 border-white bg-white p-2 shadow-2xl sm:w-32"
+          className="mx-auto w-28 rounded-[1.75rem] border-4 border-white bg-white p-2 shadow-2xl sm:w-full"
         >
           <div className="rounded-[1.15rem] bg-[#071B3A] p-3 text-white">
             <div className="flex items-center justify-between">
