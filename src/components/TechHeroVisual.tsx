@@ -28,7 +28,7 @@ const floating = [
 
 export function TechHeroVisual() {
   return (
-    <div className="relative mx-auto min-h-[420px] w-full max-w-xl">
+    <div className="relative mx-auto min-h-[500px] w-full max-w-2xl">
       <div className="circuit-lines rounded-lg" />
 
       {floating.map((item) => {
@@ -51,11 +51,8 @@ export function TechHeroVisual() {
         );
       })}
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.94, y: 30 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-1/2 top-10 w-[86%] -translate-x-1/2 rounded-lg border border-white/20 bg-[#071B3A]/75 p-3 shadow-2xl shadow-black/25 backdrop-blur"
+      <div
+        className="hover-sheen absolute left-0 top-8 w-[92%] rounded-lg border border-white/25 bg-[#071B3A]/88 p-3 shadow-2xl shadow-black/30 backdrop-blur"
       >
         <div className="rounded-md bg-[#F5F7FB] p-3">
           <div className="mb-3 flex items-center gap-1.5">
@@ -67,21 +64,21 @@ export function TechHeroVisual() {
             <div className="rounded-md bg-white p-4 shadow-sm">
               <div className="h-3 w-24 rounded-full bg-[#071B3A]/15" />
               <div className="mt-5 grid grid-cols-4 items-end gap-2">
-                {[48, 76, 58, 92].map((height, index) => (
-                  <motion.span
+                {[62, 86, 72, 102].map((height, index) => (
+                  <span
                     key={height}
-                    initial={{ height: 18 }}
-                    animate={{ height }}
-                    transition={{
-                      duration: 1.2,
-                      delay: 0.2 + index * 0.12,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      repeatDelay: 1.8,
+                    style={{
+                      height,
+                      animationDelay: `${index * 0.22}s`,
                     }}
                     className="rounded-t-md bg-gradient-to-t from-[#007BFF] to-[#00AEEF]"
                   />
                 ))}
+              </div>
+              <div className="mt-5 grid grid-cols-3 gap-2">
+                <span className="h-12 rounded-md bg-[#007BFF]/10" />
+                <span className="h-12 rounded-md bg-[#FF6A00]/10" />
+                <span className="h-12 rounded-md bg-[#00AEEF]/10" />
               </div>
             </div>
             <div className="grid gap-3">
@@ -104,12 +101,33 @@ export function TechHeroVisual() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
+
+      <div className="absolute bottom-20 left-8 hidden w-56 rounded-lg border border-white/20 bg-white/14 p-4 text-white shadow-xl backdrop-blur-md sm:block">
+        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#00AEEF]">
+          Live Orders
+        </p>
+        <div className="mt-4 flex items-end justify-between gap-3">
+          <div>
+            <p className="text-3xl font-black">24</p>
+            <p className="text-xs font-bold text-white/65">this week</p>
+          </div>
+          <div className="grid h-14 grid-cols-4 items-end gap-1">
+            {[24, 42, 34, 52].map((height) => (
+              <span
+                key={height}
+                style={{ height }}
+                className="w-3 rounded-t bg-[#FF6A00]"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
 
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-6 right-4 z-30 w-32 rounded-[2rem] border-4 border-[#071B3A] bg-white p-2 shadow-2xl sm:right-10"
+        className="absolute bottom-10 right-2 z-30 w-36 rounded-[2rem] border-4 border-white bg-white p-2 shadow-2xl sm:right-8"
       >
         <div className="rounded-[1.35rem] bg-[#071B3A] p-3 text-white">
           <div className="flex items-center justify-between">

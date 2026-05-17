@@ -32,7 +32,7 @@ export default function Home() {
         <div className="digital-grid absolute inset-0 opacity-20" />
         <div className="circuit-lines" />
         <HeroMotionLayer />
-        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.04fr_0.96fr]">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.98fr_1.02fr]">
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-bold text-white backdrop-blur">
               <Rocket className="h-4 w-4 text-[#FF6A00]" />
