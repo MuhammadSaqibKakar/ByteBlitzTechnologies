@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model AdminSecret {
+  id         Int       @id @default(autoincrement())
+  label      String    @unique @db.VarChar(80)
+  codeHash   String    @db.VarChar(255)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  lastUsedAt DateTime?
+}
+
+model AdminSession {
+  id         String   @id @default(cuid())
+  tokenHash  String   @unique @db.VarChar(64)
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  lastSeenAt DateTime @default(now())
+  ipAddress  String?  @db.VarChar(80)
+  userAgent  String?  @db.VarChar(255)
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String   @db.VarChar(120)
+  phone     String   @db.VarChar(80)
+  service   String   @db.VarChar(120)
+  message   String   @db.Text
+  source    String   @default("contact-form") @db.VarChar(80)
+  status    String   @default("new") @db.VarChar(40)
+  createdAt DateTime @default(now())
+}
+
+model AdminLoginAttempt {
+  id        String   @id @default(cuid())
+  success   Boolean
+  reason    String?  @db.VarChar(120)
+  ipAddress String?  @db.VarChar(80)
+  userAgent String?  @db.VarChar(255)
+  createdAt DateTime @default(now())
+}
