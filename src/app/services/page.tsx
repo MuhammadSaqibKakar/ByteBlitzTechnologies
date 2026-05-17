@@ -22,6 +22,7 @@ export default function ServicesPage() {
         <HeroMotionLayer />
         <div className="relative z-10 mx-auto max-w-7xl">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Our Services"
             title="Professional digital services for growing organizations"

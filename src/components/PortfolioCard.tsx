@@ -56,9 +56,9 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
           <p className="text-xs font-black uppercase tracking-[0.18em] text-[#FF6A00]">
             {item.category}
           </p>
-          <h2 className="mt-2 text-xl font-black text-[#071B3A]">
+          <h3 className="mt-2 text-xl font-black text-[#071B3A]">
             {item.title}
-          </h2>
+          </h3>
           <p className="mt-3 text-sm leading-7 text-[#071B3A]/70">
             {item.description}
           </p>

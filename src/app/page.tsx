@@ -69,7 +69,9 @@ export default function Home() {
               )}
             </div>
           </Reveal>
-          <TechHeroVisual />
+          <Reveal delay={0.15}>
+            <TechHeroVisual />
+          </Reveal>
         </div>
       </section>
 
@@ -191,11 +193,14 @@ export default function Home() {
               const Icon = item.icon;
               return (
                 <StaggerItem key={item.title}>
-                  <div className="rounded-lg border border-[#071B3A]/10 bg-[#F5F7FB] p-5">
+                  <div className="h-full rounded-lg border border-[#071B3A]/10 bg-[#F5F7FB] p-6">
                     <Icon className="h-6 w-6 text-[#FF6A00]" />
                     <h3 className="mt-4 text-lg font-black text-[#071B3A]">
                       {item.title}
                     </h3>
+                    <p className="mt-2 text-sm leading-6 text-[#071B3A]/65">
+                      {item.description}
+                    </p>
                   </div>
                 </StaggerItem>
               );

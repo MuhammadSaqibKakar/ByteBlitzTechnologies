@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { AdminShortcut } from "@/components/AdminShortcut";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -6,6 +7,12 @@ import { Navbar } from "@/components/Navbar";
 import { PageTransition } from "@/components/PageTransition";
 import { site } from "@/lib/site";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://byteblitztechnologies.com"),
@@ -47,8 +54,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full scroll-smooth">
-      <body className="min-h-full bg-[#F5F7FB] text-[#071B3A] antialiased">
+    <html lang="en" className={`h-full scroll-smooth ${inter.variable}`}>
+      <body className="min-h-full bg-[#F5F7FB] font-[family-name:var(--font-inter)] text-[#071B3A] antialiased">
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />

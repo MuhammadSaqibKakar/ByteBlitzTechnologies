@@ -129,7 +129,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={sending}
-        className="focus-ring mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#FF6A00]/25 transition hover:-translate-y-0.5 hover:bg-[#e95f00] sm:w-auto"
+        className="focus-ring mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#FF6A00]/25 transition hover:-translate-y-0.5 hover:bg-[#e95f00] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
       >
         <Send className="h-4 w-4" />
         {sending ? "Opening WhatsApp..." : "Send on WhatsApp"}

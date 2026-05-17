@@ -20,6 +20,7 @@ export default function AboutPage() {
         <HeroMotionLayer />
         <div className="relative z-10 mx-auto max-w-7xl">
           <SectionHeading
+            as="h1"
             light
             eyebrow="About"
             title="ByteBlitz Technologies"
@@ -34,9 +35,9 @@ export default function AboutPage() {
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#FF6A00]">
               Who We Are
             </p>
-            <h1 className="mt-3 text-3xl font-black tracking-tight text-[#071B3A] sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-[#071B3A] sm:text-4xl">
               Modern, reliable, and affordable technology from {site.shortLocation}
-            </h1>
+            </h2>
           </Reveal>
           <Reveal className="rounded-lg border border-[#071B3A]/10 bg-white p-7 shadow-xl shadow-[#071B3A]/10">
             <p className="text-base leading-8 text-[#071B3A]/70">
@@ -68,9 +69,12 @@ export default function AboutPage() {
                 <StaggerItem key={point.title}>
                   <div className="h-full rounded-lg bg-[#F5F7FB] p-6">
                     <Icon className="h-6 w-6 text-[#007BFF]" />
-                    <h2 className="mt-4 text-lg font-black text-[#071B3A]">
+                    <h3 className="mt-4 text-lg font-black text-[#071B3A]">
                       {point.title}
-                    </h2>
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[#071B3A]/65">
+                      {point.description}
+                    </p>
                   </div>
                 </StaggerItem>
               );
@@ -92,11 +96,14 @@ export default function AboutPage() {
               const Icon = item.icon;
               return (
                 <StaggerItem key={item.title}>
-                  <div className="rounded-lg border border-[#071B3A]/10 bg-white p-6 shadow-xl shadow-[#071B3A]/10">
+                  <div className="h-full rounded-lg border border-[#071B3A]/10 bg-white p-6 shadow-xl shadow-[#071B3A]/10">
                     <Icon className="h-6 w-6 text-[#FF6A00]" />
-                    <h2 className="mt-4 text-lg font-black text-[#071B3A]">
+                    <h3 className="mt-4 text-lg font-black text-[#071B3A]">
                       {item.title}
-                    </h2>
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-[#071B3A]/65">
+                      {item.description}
+                    </p>
                   </div>
                 </StaggerItem>
               );

@@ -26,6 +26,7 @@ export default function ContactPage() {
         <HeroMotionLayer />
         <div className="relative z-10 mx-auto max-w-7xl">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Contact"
             title="Let's Build Something Great Together"
@@ -62,9 +63,9 @@ export default function ContactPage() {
               <p className="text-sm font-black uppercase tracking-[0.18em] text-[#FF6A00]">
                 Contact Details
               </p>
-              <h1 className="mt-3 text-3xl font-black tracking-tight text-[#071B3A] sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-black tracking-tight text-[#071B3A] sm:text-4xl">
                 Fast WhatsApp chat for orders and prices
-              </h1>
+              </h2>
             </Reveal>
             <StaggerContainer className="mt-8 grid gap-4">
               {contactCards.map((card) => {

@@ -102,6 +102,9 @@ export default function PosSystemsPage() {
                     <h3 className="mt-5 text-lg font-black text-[#071B3A]">
                       {feature.title}
                     </h3>
+                    <p className="mt-2 text-sm leading-6 text-[#071B3A]/65">
+                      {feature.description}
+                    </p>
                   </div>
                 </StaggerItem>
               );

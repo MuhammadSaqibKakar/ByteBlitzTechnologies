@@ -20,6 +20,7 @@ export default function PortfolioPage() {
         <HeroMotionLayer />
         <div className="relative z-10 mx-auto max-w-7xl">
           <SectionHeading
+            as="h1"
             light
             eyebrow="Portfolio"
             title="Sample projects for confident digital decisions"

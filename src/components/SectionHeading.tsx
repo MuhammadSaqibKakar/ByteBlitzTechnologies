@@ -6,6 +6,7 @@ type SectionHeadingProps = {
   description?: string;
   align?: "left" | "center";
   light?: boolean;
+  as?: "h1" | "h2";
 };
 
 export function SectionHeading({
@@ -14,6 +15,7 @@ export function SectionHeading({
   description,
   align = "center",
   light = false,
+  as: Tag = "h2",
 }: SectionHeadingProps) {
   return (
     <Reveal
@@ -30,13 +32,13 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h1
+      <Tag
         className={`mt-3 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl ${
           light ? "text-white" : "text-[#071B3A]"
         }`}
       >
         {title}
-      </h1>
+      </Tag>
       {description ? (
         <p
           className={`mt-5 text-base leading-8 sm:text-lg ${

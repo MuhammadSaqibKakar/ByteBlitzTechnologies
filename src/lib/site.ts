@@ -170,14 +170,14 @@ export const services: Service[] = [
 ];
 
 export const posFeatures = [
-  { title: "Online & Offline POS", icon: ReceiptText },
-  { title: "Inventory Management", icon: Boxes },
-  { title: "Billing & Invoicing", icon: WalletCards },
-  { title: "Sales Reports", icon: BarChart3 },
-  { title: "User Friendly Interface", icon: Gauge },
-  { title: "Customer Management", icon: HeartHandshake },
-  { title: "Product Management", icon: Store },
-  { title: "Business Support", icon: Headset },
+  { title: "Online & Offline POS", description: "Works with or without internet for uninterrupted service.", icon: ReceiptText },
+  { title: "Inventory Management", description: "Track stock levels and get alerts before items run out.", icon: Boxes },
+  { title: "Billing & Invoicing", description: "Generate fast, accurate invoices and receipts at the counter.", icon: WalletCards },
+  { title: "Sales Reports", description: "Daily, weekly, and monthly summaries at a glance.", icon: BarChart3 },
+  { title: "User Friendly Interface", description: "Simple to learn, fast to use — even for non-technical staff.", icon: Gauge },
+  { title: "Customer Management", description: "Keep customer records and build long-term relationships.", icon: HeartHandshake },
+  { title: "Product Management", description: "Organize products, prices, and categories with ease.", icon: Store },
+  { title: "Business Support", description: "Dedicated help and guidance whenever your team needs it.", icon: Headset },
 ];
 
 export const portfolioItems = [
@@ -226,12 +226,12 @@ export const portfolioItems = [
 ];
 
 export const whyChooseUs = [
-  { title: "Professional Design", icon: Sparkles },
-  { title: "Affordable Packages", icon: WalletCards },
-  { title: "Fast Delivery", icon: Timer },
-  { title: "Business Support", icon: Headset },
-  { title: "Modern Technology", icon: Zap },
-  { title: "Quetta Based, Serving Everywhere", icon: MapPin },
+  { title: "Professional Design", description: "Clean, modern visuals that make your brand stand out and build real trust.", icon: Sparkles },
+  { title: "Affordable Packages", description: "Flexible pricing built for businesses of every size and budget.", icon: WalletCards },
+  { title: "Fast Delivery", description: "Quick turnaround without compromising quality or attention to detail.", icon: Timer },
+  { title: "Business Support", description: "Ongoing help and guidance well after your project launches.", icon: Headset },
+  { title: "Modern Technology", description: "Built with up-to-date tools that are reliable, scalable, and secure.", icon: Zap },
+  { title: "Quetta Based, Serving Everywhere", description: "Local roots with the expertise to serve clients across Pakistan.", icon: MapPin },
 ];
 
 export const stats = [
@@ -265,10 +265,10 @@ export const contactCards = [
 ];
 
 export const trustPoints = [
-  { title: "Clean design", icon: Sparkles },
-  { title: "Reliable development", icon: ShieldCheck },
-  { title: "Business-focused solutions", icon: BriefcaseBusiness },
-  { title: "Long-term support", icon: Headset },
-  { title: "Honest and professional service", icon: BadgeCheck },
-  { title: "Modern tools", icon: Globe2 },
+  { title: "Clean design", description: "Every project is crafted with clarity, consistency, and visual quality.", icon: Sparkles },
+  { title: "Reliable development", description: "Code built for the real world — stable, tested, and easy to maintain.", icon: ShieldCheck },
+  { title: "Business-focused solutions", description: "Technology that solves real problems and creates measurable value.", icon: BriefcaseBusiness },
+  { title: "Long-term support", description: "We stay available after launch for updates, fixes, and improvements.", icon: Headset },
+  { title: "Honest and professional service", description: "Transparent communication, clear pricing, and no hidden surprises.", icon: BadgeCheck },
+  { title: "Modern tools", description: "Built on proven, current technologies for performance and longevity.", icon: Globe2 },
 ];
