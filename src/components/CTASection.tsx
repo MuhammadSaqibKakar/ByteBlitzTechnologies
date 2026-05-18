@@ -15,7 +15,7 @@ export function CTASection({
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8">
       <Reveal className="mx-auto max-w-7xl overflow-hidden rounded-lg bg-[#071B3A]">
-        <div className="digital-grid animated-gradient relative bg-[linear-gradient(135deg,#071B3A,#0B3269,#007BFF)] px-6 py-12 text-center sm:px-10">
+        <div className="digital-grid relative bg-[linear-gradient(135deg,#071B3A,#0B3269,#007BFF)] px-6 py-12 text-center sm:px-10">
           <div className="circuit-lines" />
           <div className="relative z-10 mx-auto max-w-3xl">
             <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">

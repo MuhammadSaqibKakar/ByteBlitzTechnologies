@@ -1,36 +1,5 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { stats } from "@/lib/site";
-
-function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-
-    let frame = 0;
-    const totalFrames = 42;
-    const animate = () => {
-      frame += 1;
-      const progress = Math.min(frame / totalFrames, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(value * eased));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-    animate();
-  }, [inView, value]);
-
-  return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
-  );
-}
 
 export function AnimatedStats() {
   return (
@@ -39,13 +8,10 @@ export function AnimatedStats() {
         {stats.map((item, index) => {
           const Icon = item.icon;
           return (
-            <motion.div
+            <div
               key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: index * 0.07 }}
-              className="rounded-lg bg-[#F5F7FB] p-5"
+              className="stagger-item-lite rounded-lg bg-[#F5F7FB] p-5"
+              style={{ "--stagger-index": index } as CSSProperties}
             >
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#007BFF]/10 text-[#007BFF]">
@@ -54,7 +20,7 @@ export function AnimatedStats() {
                 <div>
                   <p className="text-2xl font-black text-[#071B3A]">
                     {"value" in item && typeof item.value === "number" ? (
-                      <CountUp value={item.value} suffix={item.suffix ?? ""} />
+                      `${item.value}${item.suffix ?? ""}`
                     ) : (
                       item.text
                     )}
@@ -64,7 +30,7 @@ export function AnimatedStats() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>

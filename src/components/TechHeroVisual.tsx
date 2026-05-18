@@ -1,14 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { BarChart3, ReceiptText, Smartphone } from "lucide-react";
 
 export function TechHeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-xl py-2">
+    <div className="relative mx-auto w-full max-w-[22rem] py-2 sm:max-w-xl">
       <div className="circuit-lines rounded-lg" />
 
-      <div className="hover-sheen relative z-10 rounded-lg border border-white/25 bg-[#071B3A]/88 p-3 shadow-2xl shadow-black/30 backdrop-blur">
+      <div className="hover-sheen relative z-10 rounded-lg border border-white/25 bg-[#071B3A]/90 p-3 shadow-2xl shadow-black/30">
         <div className="rounded-md bg-[#F5F7FB] p-3">
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
@@ -66,7 +63,7 @@ export function TechHeroVisual() {
       </div>
 
       <div className="relative z-20 mt-4 grid gap-4 sm:grid-cols-[1fr_8rem]">
-        <div className="rounded-lg border border-white/20 bg-white/14 p-4 text-white shadow-xl backdrop-blur-md">
+        <div className="rounded-lg border border-white/20 bg-white/14 p-4 text-white shadow-xl">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-[#00AEEF]">
             Live Orders
           </p>
@@ -87,11 +84,7 @@ export function TechHeroVisual() {
           </div>
         </div>
 
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-          className="mx-auto w-28 rounded-[1.75rem] border-4 border-white bg-white p-2 shadow-2xl sm:w-full"
-        >
+        <div className="soft-float mx-auto w-28 rounded-[1.75rem] border-4 border-white bg-white p-2 shadow-2xl sm:w-full">
           <div className="rounded-[1.15rem] bg-[#071B3A] p-3 text-white">
             <div className="flex items-center justify-between">
               <Smartphone className="h-4 w-4 text-[#00AEEF]" />
@@ -103,7 +96,7 @@ export function TechHeroVisual() {
               <span className="block h-7 rounded-md bg-[#FF6A00]" />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

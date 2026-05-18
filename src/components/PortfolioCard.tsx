@@ -31,7 +31,7 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
           } p-5`}
         >
           <div className="digital-grid absolute inset-0 opacity-30" />
-          <div className="relative h-full rounded-lg border border-white/20 bg-white/20 p-4 backdrop-blur-md">
+          <div className="relative h-full rounded-lg border border-white/20 bg-white/20 p-4">
             <div className="flex items-center justify-between">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white text-[#071B3A]">
                 <Icon className="h-5 w-5" />

@@ -25,25 +25,27 @@ import {
 export default function Home() {
   return (
     <>
-      <section className="hero-wash animated-gradient relative overflow-hidden px-4 pb-14 pt-10 text-white sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
+      <section className="hero-wash relative overflow-hidden px-4 pb-14 pt-10 text-white sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
         <div className="digital-grid absolute inset-0 opacity-20" />
         <div className="circuit-lines" />
         <HeroMotionLayer />
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-bold text-white backdrop-blur">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-bold text-white">
               <Rocket className="h-4 w-4 text-[#FF6A00]" />
               Proudly Based in Quetta, Balochistan
             </div>
-            <h1 className="mt-6 max-w-3xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-5xl 2xl:text-6xl">
-              Build Your Digital Future with ByteBlitz Technologies
+            <h1 className="mt-6 max-w-[20rem] text-3xl font-black leading-tight tracking-tight sm:max-w-3xl sm:text-5xl lg:text-5xl 2xl:text-6xl">
+              <span className="block">Build Your Digital</span>
+              <span className="block">Future with ByteBlitz</span>
+              <span className="block">Technologies</span>
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
+            <p className="mt-5 max-w-[20rem] text-sm leading-7 text-white/75 sm:max-w-2xl sm:text-lg">
               We create professional websites, POS systems, dashboards, mobile
               apps, branding, and digital solutions for businesses, schools,
               NGOs, and organizations.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex max-w-[20rem] flex-col gap-3 sm:max-w-none sm:flex-row">
               <ButtonLink
                 href={whatsappUrl(defaultWhatsAppMessage)}
                 external

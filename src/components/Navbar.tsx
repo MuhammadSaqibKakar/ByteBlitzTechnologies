@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, MessageCircle, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,7 +17,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#071B3A]/10 bg-white/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#071B3A]/10 bg-white/95">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
@@ -85,39 +84,31 @@ export function Navbar() {
         </button>
       </nav>
 
-      <AnimatePresence>
-        {open ? (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.24 }}
-            className="overflow-hidden border-t border-[#071B3A]/10 bg-white lg:hidden"
-          >
-            <div className="mx-auto grid max-w-7xl gap-2 px-4 py-4 sm:px-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="focus-ring rounded-lg px-3 py-3 text-sm font-black text-[#071B3A] transition hover:bg-[#007BFF]/10 hover:text-[#007BFF]"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <a
-                href={whatsappUrl(defaultWhatsAppMessage)}
-                target="_blank"
-                rel="noreferrer"
-                className="focus-ring mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white"
+      {open ? (
+        <div className="mobile-menu-panel overflow-hidden border-t border-[#071B3A]/10 bg-white lg:hidden">
+          <div className="mx-auto grid max-w-7xl gap-2 px-4 py-4 sm:px-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="focus-ring rounded-lg px-3 py-3 text-sm font-black text-[#071B3A] transition hover:bg-[#007BFF]/10 hover:text-[#007BFF]"
               >
-                <MessageCircle className="h-4 w-4" />
-                Get Price
-              </a>
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href={whatsappUrl(defaultWhatsAppMessage)}
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Get Price
+            </a>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

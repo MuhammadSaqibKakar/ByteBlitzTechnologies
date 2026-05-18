@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import type { CSSProperties } from "react";
 import type { ReactNode } from "react";
 
 type RevealProps = {
@@ -11,15 +9,12 @@ type RevealProps = {
 
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   return (
-    <motion.div
-      initial={false}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05 }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
+    <div
+      className={`reveal-lite ${className ?? ""}`}
+      style={{ "--reveal-delay": `${delay}s` } as CSSProperties}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -31,22 +26,9 @@ export function StaggerContainer({
   className?: string;
 }) {
   return (
-    <motion.div
-      initial={false}
-      whileInView="show"
-      viewport={{ once: true, amount: 0.05 }}
-      variants={{
-        hidden: {},
-        show: {
-          transition: {
-            staggerChildren: 0.09,
-          },
-        },
-      }}
-      className={className}
-    >
+    <div className={`stagger-lite ${className ?? ""}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -58,18 +40,8 @@ export function StaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 1, y: 0 },
-        show: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-        },
-      }}
-      className={className}
-    >
+    <div className={`stagger-item-lite ${className ?? ""}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
