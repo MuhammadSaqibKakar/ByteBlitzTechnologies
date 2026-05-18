@@ -52,7 +52,7 @@ export default function Home() {
                 external
                 icon={MessageCircle}
               >
-                Get Free Price
+                Get Price
               </ButtonLink>
               <ButtonLink href="#services" icon={ArrowRight} variant="light">
                 View Services
