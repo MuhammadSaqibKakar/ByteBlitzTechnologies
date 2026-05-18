@@ -10,7 +10,7 @@ export function AnimatedStats() {
           return (
             <div
               key={item.label}
-              className="stagger-item-lite rounded-lg bg-[#F5F7FB] p-5"
+              className="stat-card-pro stagger-item-lite rounded-lg bg-[#F5F7FB] p-5"
               style={{ "--stagger-index": index } as CSSProperties}
             >
               <div className="flex items-center gap-3">

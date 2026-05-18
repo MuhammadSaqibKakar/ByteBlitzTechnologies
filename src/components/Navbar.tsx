@@ -17,14 +17,14 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#071B3A]/10 bg-white/95">
+    <header className="nav-pro sticky top-0 z-50 border-b border-[#071B3A]/10 bg-white/95">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="focus-ring flex items-center gap-3 rounded-lg"
+          className="focus-ring group flex items-center gap-3 rounded-lg"
           aria-label="ByteBlitz Technologies home"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#071B3A] text-lg font-black text-white shadow-lg shadow-[#071B3A]/20">
+          <span className="brand-mark flex h-11 w-11 items-center justify-center rounded-lg bg-[#071B3A] text-lg font-black text-white shadow-lg shadow-[#071B3A]/20">
             BB
           </span>
           <span className="leading-tight">
@@ -45,8 +45,8 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`focus-ring rounded-lg px-3 py-2 text-sm font-bold transition hover:bg-[#007BFF]/10 hover:text-[#007BFF] ${
-                  active ? "bg-[#007BFF]/10 text-[#007BFF]" : "text-[#071B3A]/75"
+                className={`nav-link-pro focus-ring rounded-lg px-3 py-2 text-sm font-bold transition hover:bg-[#007BFF]/10 hover:text-[#007BFF] ${
+                  active ? "is-active bg-[#007BFF]/10 text-[#007BFF]" : "text-[#071B3A]/75"
                 }`}
               >
                 {link.label}
@@ -68,7 +68,7 @@ export function Navbar() {
             href={whatsappUrl(defaultWhatsAppMessage)}
             target="_blank"
             rel="noreferrer"
-            className="focus-ring inline-flex items-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#FF6A00]/25 transition hover:-translate-y-0.5 hover:bg-[#e95f00]"
+            className="button-pro focus-ring inline-flex items-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white shadow-lg shadow-[#FF6A00]/25 transition hover:-translate-y-0.5 hover:bg-[#e95f00]"
           >
             <MessageCircle className="h-4 w-4" />
             Get Price
@@ -103,7 +103,7 @@ export function Navbar() {
               href={whatsappUrl(defaultWhatsAppMessage)}
               target="_blank"
               rel="noreferrer"
-              className="focus-ring mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white"
+              className="button-pro focus-ring mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#FF6A00] px-5 py-3 text-sm font-black text-white"
             >
               <MessageCircle className="h-4 w-4" />
               Get Price

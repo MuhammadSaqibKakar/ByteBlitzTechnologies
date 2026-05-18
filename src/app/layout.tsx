@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { AdminShortcut } from "@/components/AdminShortcut";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { MotionEnhancer } from "@/components/MotionEnhancer";
 import { Navbar } from "@/components/Navbar";
 import { PageTransition } from "@/components/PageTransition";
 import { site } from "@/lib/site";
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Footer />
         <FloatingWhatsApp />
         <AdminShortcut />
+        <MotionEnhancer />
       </body>
     </html>
   );

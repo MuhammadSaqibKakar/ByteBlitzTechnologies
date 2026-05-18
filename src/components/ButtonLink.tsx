@@ -30,7 +30,7 @@ export function ButtonLink({
   external = false,
   className = "",
 }: ButtonLinkProps) {
-  const classes = `focus-ring inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black transition hover:-translate-y-0.5 ${variants[variant]} ${className}`;
+  const classes = `focus-ring button-pro inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black transition hover:-translate-y-0.5 ${variants[variant]} ${className}`;
 
   if (external) {
     return (

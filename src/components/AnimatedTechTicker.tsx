@@ -27,7 +27,7 @@ export function AnimatedTechTicker() {
           return (
             <div
               key={`${item.label}-${index}`}
-              className="mx-2 flex items-center gap-3 rounded-full border border-[#071B3A]/10 bg-[#F5F7FB] px-5 py-3 text-sm font-black text-[#071B3A]"
+              className="ticker-pill mx-2 flex items-center gap-3 rounded-full border border-[#071B3A]/10 bg-[#F5F7FB] px-5 py-3 text-sm font-black text-[#071B3A]"
             >
               <Icon className="h-4 w-4 text-[#007BFF]" />
               {item.label}

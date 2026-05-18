@@ -1,11 +1,12 @@
 import { BarChart3, ReceiptText, Smartphone } from "lucide-react";
+import type { CSSProperties } from "react";
 
 export function TechHeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[22rem] py-2 sm:max-w-xl">
+    <div className="tech-visual-shell relative mx-auto w-full max-w-[22rem] py-2 sm:max-w-xl">
       <div className="circuit-lines rounded-lg" />
 
-      <div className="hover-sheen relative z-10 rounded-lg border border-white/25 bg-[#071B3A]/90 p-3 shadow-2xl shadow-black/30">
+      <div className="dashboard-shell hover-sheen relative z-10 rounded-lg border border-white/25 bg-[#071B3A]/90 p-3 shadow-2xl shadow-black/30">
         <div className="rounded-md bg-[#F5F7FB] p-3">
           <div className="mb-3 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
@@ -25,11 +26,11 @@ export function TechHeroVisual() {
                 <BarChart3 className="h-5 w-5 text-[#007BFF]" />
               </div>
               <div className="mt-4 grid grid-cols-4 items-end gap-2">
-                {[46, 68, 56, 78].map((height) => (
+                {[46, 68, 56, 78].map((height, index) => (
                   <span
                     key={height}
-                    style={{ height }}
-                    className="rounded-t-md bg-gradient-to-t from-[#007BFF] to-[#00AEEF]"
+                    style={{ height, "--bar-index": index } as CSSProperties}
+                    className="chart-bar rounded-t-md bg-gradient-to-t from-[#007BFF] to-[#00AEEF]"
                   />
                 ))}
               </div>
@@ -48,13 +49,13 @@ export function TechHeroVisual() {
                     POS
                   </span>
                 </div>
-                <div className="mt-5 h-2 w-full rounded-full bg-white/18" />
-                <div className="mt-2 h-2 w-2/3 rounded-full bg-white/18" />
+                <div className="data-line mt-5 h-2 w-full rounded-full bg-white/18" />
+                <div className="data-line mt-2 h-2 w-2/3 rounded-full bg-white/18" />
               </div>
               <div className="rounded-md bg-white p-4 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <span className="h-8 w-8 rounded-lg bg-[#FF6A00]/15" />
-                  <span className="h-3 flex-1 rounded-full bg-[#071B3A]/15" />
+                <span className="h-8 w-8 rounded-lg bg-[#FF6A00]/15" />
+                <span className="data-line h-3 flex-1 rounded-full bg-[#071B3A]/15" />
                 </div>
               </div>
             </div>
@@ -73,11 +74,11 @@ export function TechHeroVisual() {
               <p className="text-xs font-bold text-white/65">this week</p>
             </div>
             <div className="grid h-14 grid-cols-4 items-end gap-1">
-              {[24, 42, 34, 52].map((height) => (
+              {[24, 42, 34, 52].map((height, index) => (
                 <span
                   key={height}
-                  style={{ height }}
-                  className="w-3 rounded-t bg-[#FF6A00]"
+                  style={{ height, "--bar-index": index } as CSSProperties}
+                  className="chart-bar w-3 rounded-t bg-[#FF6A00]"
                 />
               ))}
             </div>
