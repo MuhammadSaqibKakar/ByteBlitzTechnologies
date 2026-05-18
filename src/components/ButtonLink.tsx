@@ -31,14 +31,13 @@ export function ButtonLink({
   className = "",
 }: ButtonLinkProps) {
   const classes = `focus-ring inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-black transition hover:-translate-y-0.5 ${variants[variant]} ${className}`;
-  const isMailLink = href.startsWith("mailto:");
 
   if (external) {
     return (
       <a
         href={href}
-        target={isMailLink ? undefined : "_blank"}
-        rel={isMailLink ? undefined : "noreferrer"}
+        target="_blank"
+        rel="noreferrer"
         className={classes}
       >
         {Icon ? <Icon className="h-4 w-4" /> : null}

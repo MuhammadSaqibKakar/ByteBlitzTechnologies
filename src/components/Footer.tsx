@@ -105,6 +105,8 @@ export function Footer() {
             </a>
             <a
               href={emailUrl()}
+              target="_blank"
+              rel="noreferrer"
               className="flex items-center gap-3 transition hover:text-white"
             >
               <Mail className="h-4 w-4 text-[#FF6A00]" />

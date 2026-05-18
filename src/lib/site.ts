@@ -49,9 +49,17 @@ export function whatsappUrl(message = defaultWhatsAppMessage) {
 
 export function emailUrl(
   subject = "Project inquiry for ByteBlitz Technologies",
-  body = "Assalamualaikum ByteBlitz Technologies,%0D%0A%0D%0AI want to discuss my project.",
+  body = "Assalamualaikum ByteBlitz Technologies,\n\nI want to discuss my project.",
 ) {
-  return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  const params = new URLSearchParams({
+    view: "cm",
+    fs: "1",
+    to: site.email,
+    su: subject,
+    body,
+  });
+
+  return `https://mail.google.com/mail/?${params.toString()}`;
 }
 
 export const navLinks = [

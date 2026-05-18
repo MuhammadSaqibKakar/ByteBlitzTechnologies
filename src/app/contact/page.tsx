@@ -83,6 +83,8 @@ export default function ContactPage() {
                   ) : card.title === "Email" ? (
                     <a
                       href={emailUrl()}
+                      target="_blank"
+                      rel="noreferrer"
                       className="font-black text-[#071B3A] transition hover:text-[#007BFF]"
                     >
                       {card.value}

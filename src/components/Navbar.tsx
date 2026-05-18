@@ -58,6 +58,8 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={emailUrl()}
+            target="_blank"
+            rel="noreferrer"
             className="focus-ring rounded-lg px-3 py-2 text-sm font-semibold text-[#071B3A]/70 transition hover:text-[#007BFF]"
           >
             {site.email}
