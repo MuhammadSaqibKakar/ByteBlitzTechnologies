@@ -5,20 +5,17 @@ import {
   ReceiptText,
   Rocket,
 } from "lucide-react";
-import Link from "next/link";
 import { AnimatedStats } from "@/components/AnimatedStats";
 import { AnimatedTechTicker } from "@/components/AnimatedTechTicker";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { HeroMotionLayer } from "@/components/HeroMotionLayer";
-import { PortfolioCard } from "@/components/PortfolioCard";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { TechHeroVisual } from "@/components/TechHeroVisual";
 import {
   defaultWhatsAppMessage,
-  portfolioItems,
   posWhatsAppMessage,
   site,
   whatsappUrl,
@@ -154,30 +151,6 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Portfolio"
-            title="Demo projects that show what we can build"
-            description="Sample project examples for the kind of websites, systems, dashboards, and branding ByteBlitz can deliver."
-          />
-          <StaggerContainer className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {portfolioItems.slice(0, 3).map((item) => (
-              <PortfolioCard key={item.title} item={item} />
-            ))}
-          </StaggerContainer>
-          <div className="mt-10 text-center">
-            <Link
-              href="/portfolio"
-              className="focus-ring inline-flex items-center gap-2 rounded-full border border-[#071B3A]/15 bg-white px-5 py-3 text-sm font-black text-[#071B3A] transition hover:-translate-y-0.5 hover:text-[#007BFF]"
-            >
-              View Full Portfolio
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </section>
 

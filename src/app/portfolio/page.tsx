@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { MessageCircle } from "lucide-react";
+import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { HeroMotionLayer } from "@/components/HeroMotionLayer";
-import { PortfolioCard } from "@/components/PortfolioCard";
-import { StaggerContainer } from "@/components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { portfolioItems } from "@/lib/site";
+import { defaultWhatsAppMessage, whatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Demo portfolio projects by ByteBlitz Technologies including business websites, school websites, NGO websites, POS systems, dashboards, and branding.",
+    "ByteBlitz Technologies portfolio will be updated soon with real websites, POS systems, dashboards, apps, and branding work.",
 };
 
 export default function PortfolioPage() {
@@ -23,20 +24,35 @@ export default function PortfolioPage() {
             as="h1"
             light
             eyebrow="Portfolio"
-            title="Sample projects for confident digital decisions"
-            description="Demo portfolio cards show the type of professional solutions ByteBlitz Technologies can build for your organization."
+            title="Real project work will be added soon"
+            description="We are preparing this page for completed ByteBlitz Technologies work. For now, contact us directly for websites, POS systems, dashboards, apps, and branding."
           />
         </div>
       </section>
 
       <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {portfolioItems.map((item) => (
-              <PortfolioCard key={item.title} item={item} />
-            ))}
-          </StaggerContainer>
-        </div>
+        <Reveal className="mx-auto max-w-3xl rounded-lg border border-[#071B3A]/10 bg-white p-8 text-center shadow-2xl shadow-[#071B3A]/10">
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#FF6A00]">
+            Coming Soon
+          </p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight text-[#071B3A]">
+            Portfolio updates are on the way
+          </h2>
+          <p className="mt-4 text-base leading-8 text-[#071B3A]/70">
+            We will add real client projects and screenshots here later. You can
+            still request a similar website, POS system, dashboard, app, or
+            branding package today.
+          </p>
+          <div className="mt-7 flex justify-center">
+            <ButtonLink
+              href={whatsappUrl(defaultWhatsAppMessage)}
+              external
+              icon={MessageCircle}
+            >
+              Get Price
+            </ButtonLink>
+          </div>
+        </Reveal>
       </section>
 
       <CTASection />
