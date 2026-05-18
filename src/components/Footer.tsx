@@ -1,5 +1,6 @@
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { BrandMark } from "@/components/BrandMark";
 import {
   defaultWhatsAppMessage,
   emailUrl,
@@ -15,9 +16,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.9fr_1.1fr] lg:px-8">
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white text-lg font-black text-[#071B3A]">
-              BB
-            </span>
+            <BrandMark className="shadow-none" />
             <div>
               <p className="text-lg font-black">{site.name}</p>
               <p className="text-sm font-semibold text-[#00AEEF]">

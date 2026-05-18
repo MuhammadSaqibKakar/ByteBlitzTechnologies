@@ -4,6 +4,7 @@ import { Menu, MessageCircle, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { BrandMark } from "@/components/BrandMark";
 import {
   defaultWhatsAppMessage,
   emailUrl,
@@ -24,9 +25,7 @@ export function Navbar() {
           className="focus-ring group flex items-center gap-3 rounded-lg"
           aria-label="ByteBlitz Technologies home"
         >
-          <span className="brand-mark flex h-11 w-11 items-center justify-center rounded-lg bg-[#071B3A] text-lg font-black text-white shadow-lg shadow-[#071B3A]/20">
-            BB
-          </span>
+          <BrandMark priority />
           <span className="leading-tight">
             <span className="block text-base font-black tracking-tight text-[#071B3A] sm:text-lg">
               ByteBlitz
