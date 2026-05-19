@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
-import { PrintProjectsButton } from "@/components/PrintProjectsButton";
 import {
   defaultWhatsAppMessage,
   emailUrl,
@@ -56,15 +55,11 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <PrintProjectsButton
-            compact
-            className="focus-ring inline-flex items-center gap-2 rounded-full border border-[#071B3A]/10 bg-white px-4 py-3 text-sm font-black text-[#071B3A] shadow-sm transition hover:-translate-y-0.5 hover:border-[#007BFF]/30 hover:text-[#007BFF]"
-          />
           <a
             href={emailUrl()}
             target="_blank"
             rel="noreferrer"
-            className="focus-ring hidden rounded-lg px-3 py-2 text-sm font-semibold text-[#071B3A]/70 transition hover:text-[#007BFF] xl:inline-flex"
+            className="focus-ring rounded-lg px-3 py-2 text-sm font-semibold text-[#071B3A]/70 transition hover:text-[#007BFF]"
           >
             {site.email}
           </a>
@@ -112,9 +107,6 @@ export function Navbar() {
               <MessageCircle className="h-4 w-4" />
               Get Price
             </a>
-            <PrintProjectsButton
-              className="focus-ring inline-flex items-center justify-center gap-2 rounded-full border border-[#071B3A]/10 bg-white px-5 py-3 text-sm font-black text-[#071B3A]"
-            />
           </div>
         </div>
       ) : null}
