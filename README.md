@@ -1,17 +1,62 @@
-# ByteBlitz Technologies Website
+# ByteBlitz Technologies
 
-Modern Next.js website for ByteBlitz Technologies, built with React, Tailwind CSS, Framer Motion, and Lucide icons.
+Official web application for **ByteBlitz Technologies**, built as a modern, responsive business presence for software services, digital solutions, portfolio work, and customer enquiries.
 
-## Run Locally
+## ✨ Highlights
+
+- Responsive, production-oriented Next.js interface
+- Service, portfolio, about, and contact experiences
+- Motion and interaction design with Framer Motion
+- Database-backed contact/enquiry workflow
+- Administrative functionality protected by server-side access controls
+- Standalone Node.js build support for production hosting
+
+## 🛠️ Tech Stack
+
+- **Next.js / React / TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide Icons**
+- **Prisma ORM**
+- **MySQL**
+- **Node.js**
+
+## 📁 Key Areas
+
+```text
+src/
+├── app/                 # Application routes and pages
+├── components/          # Shared UI and interactive components
+└── lib/                 # Site configuration and shared logic
+
+prisma/
+└── schema.prisma        # Database schema
+```
+
+## ▶️ Local Development
+
+Install dependencies and start the development server:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Then open:
 
-## Production Build
+```text
+http://localhost:3000
+```
+
+## ✅ Verification
+
+The project includes a verification workflow for development checks:
+
+```bash
+npm run verify
+```
+
+## 📦 Production Build
 
 ```bash
 npm install
@@ -20,72 +65,23 @@ npm run build
 npm start
 ```
 
-Full verification loop:
+The application is configured for a standalone Next.js production build suitable for Node.js hosting environments.
 
-```bash
-npm run verify
-```
+## 🔐 Security & Configuration
 
-## Hostinger Node.js Deployment
+Production database credentials, administrative access values, and other secrets are supplied through environment configuration and are intentionally not documented in this public README.
 
-This project is configured with `output: "standalone"` in `next.config.ts`, which is useful for Node.js hosting. It also uses MySQL through Prisma for admin access and saved contact requests.
+When deploying your own instance:
 
-### Database Setup
+- keep `.env` files and credentials out of source control;
+- use strong, unique production secrets;
+- apply least-privilege database permissions;
+- keep private administrative routes and operational procedures out of public documentation.
 
-1. In Hostinger hPanel, create a MySQL database, database user, and password.
-2. Add these environment variables to your Node.js app or `.env` file:
+## 🌐 About ByteBlitz
 
-```bash
-DATABASE_URL="mysql://DB_USER:DB_PASSWORD@DB_HOST:3306/DB_NAME"
-ADMIN_ACCESS_CODE="CHANGE_THIS_PRIVATE_ADMIN_CODE"
-```
+ByteBlitz Technologies focuses on practical software solutions, web applications, business systems, and digital products with an emphasis on maintainability and real-world usability.
 
-3. Run the database setup:
+---
 
-```bash
-npm run db:migrate
-npm run db:seed
-```
-
-Set `ADMIN_ACCESS_CODE` privately on Hostinger, then run the seed command. The admin code is saved in the database as a secure hash. The site does not compare the admin code in frontend code.
-
-### Hidden Admin Access
-
-Open the website and press:
-
-```bash
-Ctrl + Shift + X
-```
-
-Enter the admin code after you have seeded it into the database. Contact form submissions are saved in MySQL when `DATABASE_URL` is connected.
-
-Option A, upload full project:
-
-1. Upload the project to Hostinger or connect a Git repository.
-2. In Hostinger hPanel, create a Node.js app and choose Node.js 20 or newer.
-3. Set the app root to this project folder.
-4. Add `DATABASE_URL` and `ADMIN_ACCESS_CODE`.
-5. Run `npm install`, `npm run db:migrate`, `npm run db:seed`, and `npm run build`.
-6. Set the start command to `npm start`.
-
-Option B, upload standalone build:
-
-1. Run `npm install` and `npm run build` locally.
-2. Copy `.next/static` into `.next/standalone/.next/static`.
-3. Copy `public` into `.next/standalone/public`.
-4. Upload the contents of `.next/standalone` to the Hostinger app folder.
-5. Set the startup file or command to `node server.js`.
-
-## Where To Edit Later
-
-- Company name, phone, email, WhatsApp messages, services, portfolio, stats, and contact cards: `src/lib/site.ts`
-- Database schema: `prisma/schema.prisma`
-- Admin seed script: `prisma/seed.ts`
-- Hidden admin panel: `src/components/AdminShortcut.tsx`
-- Home page sections: `src/app/page.tsx`
-- Services page: `src/app/services/page.tsx`
-- POS page: `src/app/pos-systems/page.tsx`
-- Portfolio page: `src/app/portfolio/page.tsx`
-- About page: `src/app/about/page.tsx`
-- Contact page and WhatsApp form: `src/app/contact/page.tsx` and `src/components/ContactForm.tsx`
-- Global colors and background effects: `src/app/globals.css`
+**Built and maintained by Muhammad Saqib Kakar.**
