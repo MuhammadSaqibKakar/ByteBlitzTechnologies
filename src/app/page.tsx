@@ -10,6 +10,7 @@ import { AnimatedTechTicker } from "@/components/AnimatedTechTicker";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { HeroMotionLayer } from "@/components/HeroMotionLayer";
+import { PortfolioCard } from "@/components/PortfolioCard";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceGrid } from "@/components/ServiceGrid";
@@ -17,6 +18,7 @@ import { TechHeroVisual } from "@/components/TechHeroVisual";
 import {
   defaultWhatsAppMessage,
   posWhatsAppMessage,
+  portfolioItems,
   site,
   whatsappUrl,
   whyChooseUs,
@@ -86,6 +88,26 @@ export default function Home() {
           />
           <div className="mt-12">
             <ServiceGrid />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F5F7FB] px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            eyebrow="Selected Work"
+            title="Real projects already running online"
+            description="Explore live websites and project-monitoring systems developed and deployed for real operational use."
+          />
+          <StaggerContainer className="mt-12 grid gap-6 md:grid-cols-2">
+            {portfolioItems.map((item) => (
+              <PortfolioCard key={item.title} item={item} />
+            ))}
+          </StaggerContainer>
+          <div className="mt-10 flex justify-center">
+            <ButtonLink href="/portfolio" icon={ArrowRight} variant="outline">
+              View Full Portfolio
+            </ButtonLink>
           </div>
         </div>
       </section>
