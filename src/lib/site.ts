@@ -190,46 +190,40 @@ export const posFeatures = [
 
 export const portfolioItems = [
   {
-    title: "Business Website",
-    category: "Website",
-    description: "Modern responsive website for a local business.",
-    icon: BriefcaseBusiness,
-    tone: "blue",
-  },
-  {
-    title: "School Website",
-    category: "Education",
-    description: "Professional school website with pages and admission info.",
-    icon: School,
-    tone: "sky",
-  },
-  {
-    title: "NGO Website",
-    category: "Organization",
-    description: "Clean website for organization profile and projects.",
-    icon: HeartHandshake,
+    title: "Khuzdar Airport Project Dashboard",
+    category: "Project Monitoring",
+    description:
+      "Production monitoring website for the Khuzdar Airport Boundary Wall project, with phase-wise progress, project controls, site gallery, printable reporting, and protected administration.",
+    icon: Gauge,
     tone: "orange",
+    liveUrl: "https://khuzdarairport.site",
   },
   {
-    title: "POS System",
-    category: "Software",
-    description: "Billing, inventory, sales reports, and dashboard.",
-    icon: ReceiptText,
+    title: "Pasni Road Project Dashboard",
+    category: "Infrastructure",
+    description:
+      "Live road-project monitoring dashboard built to present project information, progress, field updates, reporting material, and project-control data in a clear web interface.",
+    icon: MapPin,
     tone: "navy",
+    liveUrl: "https://pasniroad.com",
   },
   {
-    title: "Project Dashboard",
-    category: "Analytics",
-    description: "Progress tracking and analytics dashboard.",
+    title: "BSDI Completed Projects Portal",
+    category: "Reporting Portal",
+    description:
+      "District-wise presentation and reporting portal for completed BSDI development projects, with browser-based project browsing and slide-oriented reporting workflows.",
     icon: LayoutDashboard,
     tone: "blue",
+    liveUrl: "https://completedprojects.online",
   },
   {
-    title: "Branding Design",
-    category: "Branding",
-    description: "Logo, social media posts, and brand kit.",
-    icon: Palette,
-    tone: "orange",
+    title: "BSDI Programme Website",
+    category: "Government Programme",
+    description:
+      "Public-facing BSDI programme website presenting programme information, achievements, project data, district coverage, monitoring information, and development statistics.",
+    icon: Globe2,
+    tone: "sky",
+    liveUrl: "https://bsdi.pk",
   },
 ];
 
