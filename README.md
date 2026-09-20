@@ -1,41 +1,57 @@
 # ByteBlitz Technologies
 
-Official web application for **ByteBlitz Technologies**, built as a modern, responsive business presence for software services, digital solutions, portfolio work, and customer enquiries.
+**ByteBlitz Technologies** is a Quetta-based software and digital solutions studio building production websites, project-monitoring systems, dashboards, business software, POS solutions, and custom web applications.
 
-## ✨ Highlights
+This repository contains the official ByteBlitz Technologies website. More importantly, the portfolio now highlights **real deployed work that can be opened and verified online**.
 
-- Responsive, production-oriented Next.js interface
-- Service, portfolio, about, and contact experiences
-- Motion and interaction design with Framer Motion
-- Database-backed contact/enquiry workflow
-- Administrative functionality protected by server-side access controls
-- Standalone Node.js build support for production hosting
+## 🚀 Selected Live Projects
 
-## 🛠️ Tech Stack
+| Project | What it does | Live |
+| --- | --- | --- |
+| **Khuzdar Airport Project Dashboard** | Project-monitoring system for the Khuzdar Airport Boundary Wall project with phase-wise progress, project controls, site photographs, reporting, and protected administration. | [khuzdarairport.site](https://khuzdarairport.site) |
+| **Pasni Road Project Dashboard** | Infrastructure project-monitoring dashboard for presenting project information, progress, field updates, reporting material, and project-control data. | [pasniroad.com](https://pasniroad.com) |
+| **BSDI Completed Projects Portal** | District-wise presentation and reporting portal for completed BSDI development projects with browser-based project browsing and slide-oriented reporting workflows. | [completedprojects.online](https://completedprojects.online) |
+| **BSDI Programme Website** | Public-facing programme website presenting BSDI information, achievements, project data, district coverage, monitoring information, and development statistics. | [bsdi.pk](https://bsdi.pk) |
 
-- **Next.js / React / TypeScript**
+> Some operational project source repositories are intentionally private. The live deployments above are provided so visitors can evaluate the delivered work directly.
+
+## 💼 What We Build
+
+- Professional business and organization websites
+- Project monitoring and reporting dashboards
+- POS, billing, inventory, and business systems
+- Admin dashboards and internal workflow tools
+- Data-driven portals and reporting systems
+- Custom web applications
+- Mobile application solutions
+- Branding and digital presence
+
+## 🛠️ Website Tech Stack
+
+The ByteBlitz Technologies website in this repository is built with:
+
+- **Next.js 16**
+- **React 19**
+- **TypeScript**
 - **Tailwind CSS**
-- **Framer Motion**
-- **Lucide Icons**
 - **Prisma ORM**
-- **MySQL**
+- **MySQL / MariaDB**
 - **Node.js**
+- **Lucide React**
 
-## 📁 Key Areas
+## 📁 Project Structure
 
 ```text
 src/
-├── app/                 # Application routes and pages
-├── components/          # Shared UI and interactive components
-└── lib/                 # Site configuration and shared logic
+├── app/                 # App Router pages and routes
+├── components/          # Reusable UI components
+└── lib/                 # Site configuration and portfolio data
 
 prisma/
 └── schema.prisma        # Database schema
 ```
 
 ## ▶️ Local Development
-
-Install dependencies and start the development server:
 
 ```bash
 npm install
@@ -50,11 +66,13 @@ http://localhost:3000
 
 ## ✅ Verification
 
-The project includes a verification workflow for development checks:
+Run the complete project verification workflow:
 
 ```bash
 npm run verify
 ```
+
+This runs linting, TypeScript checks, and the production build.
 
 ## 📦 Production Build
 
@@ -65,22 +83,25 @@ npm run build
 npm start
 ```
 
-The application is configured for a standalone Next.js production build suitable for Node.js hosting environments.
+The application is configured for a standalone Next.js deployment suitable for Node.js hosting environments.
 
-## 🔐 Security & Configuration
+## 🔐 Security
 
-Production database credentials, administrative access values, and other secrets are supplied through environment configuration and are intentionally not documented in this public README.
+Production credentials, database passwords, administrative passcodes, and deployment secrets are supplied through protected environment configuration and are never intended to be committed to this public repository.
 
-When deploying your own instance:
+For deployments:
 
-- keep `.env` files and credentials out of source control;
-- use strong, unique production secrets;
-- apply least-privilege database permissions;
-- keep private administrative routes and operational procedures out of public documentation.
+- keep `.env` files and secrets out of source control;
+- use unique production credentials;
+- use least-privilege database accounts;
+- keep operational/admin procedures private;
+- review uploaded or generated files before committing them.
 
-## 🌐 About ByteBlitz
+## 📍 About ByteBlitz
 
-ByteBlitz Technologies focuses on practical software solutions, web applications, business systems, and digital products with an emphasis on maintainability and real-world usability.
+ByteBlitz Technologies is based in **Quetta, Balochistan, Pakistan** and focuses on practical software that solves real operational and business problems.
+
+The portfolio is deliberately centered on deployed systems rather than concept-only designs.
 
 ---
 
