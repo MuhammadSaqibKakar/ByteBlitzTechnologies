@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { ExternalLink, MessageCircle } from "lucide-react";
 import type { ComponentType } from "react";
 import { StaggerItem } from "@/components/Reveal";
 import { whatsappUrl } from "@/lib/site";
@@ -9,6 +9,7 @@ type PortfolioItem = {
   description: string;
   icon: ComponentType<{ className?: string }>;
   tone: string;
+  liveUrl: string;
 };
 
 const toneStyles: Record<string, string> = {
@@ -24,7 +25,7 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
 
   return (
     <StaggerItem>
-      <article className="hover-sheen group overflow-hidden rounded-lg border border-[#071B3A]/10 bg-white shadow-xl shadow-[#071B3A]/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#007BFF]/15">
+      <article className="hover-sheen group h-full overflow-hidden rounded-lg border border-[#071B3A]/10 bg-white shadow-xl shadow-[#071B3A]/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#007BFF]/15">
         <div
           className={`relative h-56 bg-gradient-to-br ${
             toneStyles[item.tone] ?? toneStyles.blue
@@ -32,7 +33,7 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
         >
           <div className="digital-grid absolute inset-0 opacity-30" />
           <div className="relative h-full rounded-lg border border-white/20 bg-white/20 p-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white text-[#071B3A]">
                 <Icon className="h-5 w-5" />
               </span>
@@ -52,25 +53,43 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
             </div>
           </div>
         </div>
+
         <div className="p-6">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#FF6A00]">
-            {item.category}
-          </p>
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#FF6A00]">
+              {item.category}
+            </p>
+            <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-700">
+              Live
+            </span>
+          </div>
           <h3 className="mt-2 text-xl font-black text-[#071B3A]">
             {item.title}
           </h3>
           <p className="mt-3 text-sm leading-7 text-[#071B3A]/70">
             {item.description}
           </p>
-          <a
-            href={whatsappUrl(message)}
-            target="_blank"
-            rel="noreferrer"
-            className="focus-ring mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-[#071B3A] px-4 py-3 text-sm font-black text-white transition hover:bg-[#FF6A00]"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Request Similar Project
-          </a>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            <a
+              href={item.liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring inline-flex items-center justify-center gap-2 rounded-full bg-[#007BFF] px-4 py-3 text-sm font-black text-white transition hover:bg-[#071B3A]"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View Live Project
+            </a>
+            <a
+              href={whatsappUrl(message)}
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring inline-flex items-center justify-center gap-2 rounded-full border border-[#071B3A]/15 bg-white px-4 py-3 text-sm font-black text-[#071B3A] transition hover:border-[#FF6A00] hover:text-[#FF6A00]"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Request Similar
+            </a>
+          </div>
         </div>
       </article>
     </StaggerItem>
